@@ -41,13 +41,13 @@
         </div>
       </div>
 
-      <div class="col-sm-4 mx-auto mb-4">
-        <a class="btn btn-success" style="margin-top:20px" data-bs-toggle="modal" href="#bill">Collect Fees</a>
+      <div class="col-sm-4 mx-auto mb-4 mt-5">
+        <!-- <a class="btn btn-success" style="margin-top:20px" data-bs-toggle="modal" href="#bill">Collect Fees</a> -->
 
-        <a class="btn btn-success" style="margin-top:20px" href="{{route('single.transection',$member->id)}}">Transection History</a>
-
-        <h3 class="card-title text-center"> <strong>Transection</strong>
-        </h3>
+        <div class="d-flex justify-content-between">
+          <h3 class="card-title text-center"> <strong>Transection</strong></h3>
+          <a class="btn btn-success" style="margin-top:20px" href="{{route('single.transection',$member->id)}}">Transection History</a>
+        </div>
         <form action="{{route('transection',$member->id)}}" method="post">
           @csrf
           <div class="form-group">

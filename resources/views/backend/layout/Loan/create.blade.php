@@ -47,6 +47,7 @@
 
 
                                 <label class="form-label">Loan Purpose<span style="color:red;">*</span></label>
+                                <!-- <textarea class="form-label"></textarea> -->
                                 <input type="text" class="form-control" placeholder="Write valid Purpose" name="loan_purpose" value="{{ old('loan_purpose') }}" >
                             </div>
 
