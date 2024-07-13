@@ -81,7 +81,7 @@
     <div class="container pt-5">
 
         <div class="row align-items-stretch">
-            <div class="c-dashboardInfo col-lg-3 col-md-6">
+            <!-- <div class="c-dashboardInfo col-lg-3 col-md-6">
                 <div class="wrap">
                     <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">FDR Available Amount</h4><span class="hind-font caption-12 c-dashboardInfo__count">{{$totalfdr}}<i class="fa-solid fa-bangladeshi-taka-sign"></i></span>
                 </div>
@@ -90,20 +90,18 @@
                 <div class="wrap">
                     <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">DPS Available Amount </h4><span class="hind-font caption-12 c-dashboardInfo__count">{{$totaldps}}<i class="fa-solid fa-bangladeshi-taka-sign"></i></span>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="c-dashboardInfo col-lg-3 col-md-6">
+            <!-- <div class="c-dashboardInfo col-lg-3 col-md-6">
                 <div class="wrap">
                     <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">Personal Account Amount</h4><span class="hind-font caption-12 c-dashboardInfo__count">{{$totalAmount}}<i class="fa-solid fa-bangladeshi-taka-sign"></i></span>
                 </div>
-            </div>
+            </div> -->
             <div class="c-dashboardInfo col-lg-3 col-md-6">
                 <div class="wrap">
                     <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title"> Given Loan Amount</h4><span class="hind-font caption-12 c-dashboardInfo__count">{{$loanDeposit}}<i class="fa-solid fa-bangladeshi-taka-sign"></i></span>
                 </div>
             </div>
-        </div>
-        <div class="row align-items-stretch">
             <div class="c-dashboardInfo col-lg-3 col-md-6">
                 <div class="wrap">
                     <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">Official Income</h4><span class="hind-font caption-12 c-dashboardInfo__count">{{$income}}<i class="fa-solid fa-bangladeshi-taka-sign"></i></span>
@@ -114,10 +112,19 @@
                     <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">Official Expense</h4><span class="hind-font caption-12 c-dashboardInfo__count">{{$expense}}<i class="fa-solid fa-bangladeshi-taka-sign"></i></span>
                 </div>
             </div>
-
-          
-
         </div>
+        <!-- <div class="row align-items-stretch">
+            <div class="c-dashboardInfo col-lg-3 col-md-6">
+                <div class="wrap">
+                    <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">Official Income</h4><span class="hind-font caption-12 c-dashboardInfo__count">{{$income}}<i class="fa-solid fa-bangladeshi-taka-sign"></i></span>
+                </div>
+            </div>
+            <div class="c-dashboardInfo col-lg-3 col-md-6">
+                <div class="wrap">
+                    <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">Official Expense</h4><span class="hind-font caption-12 c-dashboardInfo__count">{{$expense}}<i class="fa-solid fa-bangladeshi-taka-sign"></i></span>
+                </div>
+            </div>
+        </div> -->
     </div>
 </div>
 @endsection

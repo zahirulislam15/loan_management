@@ -43,7 +43,8 @@
                             </div>
                             <div class="col-md-12">
                                 <label class="form-label">Loan Purpose<span style="color:red;">*</span></label>
-                                <input type="text" class="form-control" placeholder="Write valid Purpose" name="loan_purpose" value="{{$edit->loan_purpose}}">
+                                <!-- <input type="text" class="form-control" placeholder="Write valid Purpose" name="loan_purpose" value="{{$edit->loan_purpose}}" required> -->
+                                <textarea name="loan_purpose" id="" placeholder="Write valid Purpose" class="form-control"  value="{{$edit->loan_purpose}}" required>test</textarea>
                             </div>
                             <div class="col-12">
                                 <div class="d-grid">

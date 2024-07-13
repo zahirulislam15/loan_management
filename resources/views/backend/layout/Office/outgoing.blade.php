@@ -9,49 +9,49 @@
             <div class="card">
                 <div class="card-body">
                     <div class="border p-3 rounded" style="margin-top: 20px;">
-                        <form class="row g-3" method="post" action="{{ route('expense.store') }}" enctype="multipart/form-data">
+                        <form method="post" action="{{ route('expense.store') }}" enctype="multipart/form-data">
                             @csrf
 
                             <div class="col-md-12">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label class="form-label"> Expense Type<span style="color:red;"></span></label>
-                                        <select class="form-control" name="purpose" id="">
-                                            <option value="Staff Salary">Staff Salary</option>
-                                            <option value="Transection Bill">Transport Bill</option>
-                                            <option value="Others Bill">Others Bill</option>
-                                        </select>
+                                        <div class="row">
+                                            <label class="form-label"> Expense Type</label>
+                                            <select class="form-control" name="purpose">
+                                                <option value="Staff Salary">Staff Salary</option>
+                                                <option value="Transection Bill">Transport Bill</option>
+                                                <option value="Others Bill">Others Bill</option>
+                                            </select>
+                                        </div>                                        
                                     </div>
-
 
                                     <div class="col-md-6">
                                         <div class="row">
                                             <label class="form-label">Expense By<span style="color:red;">&nbsp;&nbsp;&nbsp;</span>
-                                                <select class="form-control" name="expense_by" id="">
-                                                    @foreach($staff as $data)
-                                                    <option value="{{$data->id}}">{{$data->name}}</option>
-                                                    @endforeach
-                                                </select>
+                                            <select class="form-control" name="expense_by" id="">
+                                                @foreach($staff as $data)
+                                                <option value="{{$data->id}}">{{$data->name}}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-12">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="row">
-                                                <label class="form-label">Expense Amount<span style="color:red;">&nbsp;&nbsp;&nbsp;</span>
-                                                    <input class="form-control" type="number" name="amount">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="row">
-                                                <label class="form-label">Date<span style="color:red;">&nbsp;&nbsp;&nbsp;</span>
-                                                    <input class="form-control" type="date" name="date">
-                                            </div>
-                                        </div>
-                                    </div>
 
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <label class="form-label">Expense Amount<span style="color:red;">&nbsp;&nbsp;&nbsp;</span>
+                                            <input class="form-control" type="number" name="amount">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <label class="form-label">Date<span style="color:red;">&nbsp;&nbsp;&nbsp;</span>
+                                            <input class="form-control" type="date" name="date">
+                                        </div>
+                                    </div>
                                 </div>
+
                             </div>
                     </div>
 

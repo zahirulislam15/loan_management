@@ -16,7 +16,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label class="form-label">Name<span style="color:red;">*</span></label>
-                                        <input type="text" class="form-control" placeholder="" name="name" value="{{$edit->name}}">
+                                        <input type="text" class="form-control" placeholder="" name="name" value="{{$edit->name}}" required>
                                         @error('name')
                                         <div class="alert alert-danger">{{$message}}</div>
                                         @enderror
@@ -34,14 +34,14 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label class="form-label">Father Name<span style="color:red;">*</span></label>
-                                        <input type="text" class="form-control" placeholder="" name="father_name" value="{{$edit->father_name}}">
+                                        <input type="text" class="form-control" placeholder="" name="father_name" value="{{$edit->father_name}}" required>
                                         @error('father_name')
                                         <div class="alert alert-danger">{{$message}}</div>
                                         @enderror
                                     </div>
                                     <div class="col-md-6">
                                         <label class="form-label"> Mother Name<span style="color:red;">*</span></label>
-                                        <input type="text" class="form-control" name="mother_name" value="{{$edit->mother_name}}">
+                                        <input type="text" class="form-control" name="mother_name" value="{{$edit->mother_name}}" required>
                                         @error('mother_name')
                                         <div class="alert alert-danger">{{$message}}</div>
                                         @enderror
@@ -52,14 +52,14 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label class="form-label">Present Address<span style="color:red;"></span></label>
-                                        <input type="text" class="form-control" placeholder="" name="present_address" value="{{$edit->present_address}}">
+                                        <input type="text" class="form-control" placeholder="" name="present_address" value="{{$edit->present_address}}" required>
                                         @error('present_address')
                                         <div class="alert alert-danger">{{$message}}</div>
                                         @enderror
                                     </div>
                                     <div class="col-md-6">
                                         <label class="form-label">Parmanent Address<span style="color:red;"></span></label>
-                                        <input type="text" class="form-control" name="parmanent_address" value="{{$edit->parmanent_address}}">
+                                        <input type="text" class="form-control" name="parmanent_address" value="{{$edit->parmanent_address}}" required>
                                         @error('parmanent_address')
                                         <div class="alert alert-danger">{{$message}}</div>
                                         @enderror
@@ -69,7 +69,7 @@
                             <div class="col-md-12">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label class="form-label">Birth Id<span style="color:red;">*</span></label>
+                                        <label class="form-label">Birth Id</label>
                                         <input type="number" class="form-control" placeholder="" name="birth_id" value="{{$edit->birth_id}}">
                                         @error('birth_id')
                                         <div class="alert alert-danger">{{$message}}</div>
@@ -77,7 +77,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <label class="form-label">Nid <span style="color:red;">*</span></label>
-                                        <input type="number" class="form-control" name="nid" value="{{$edit->nid}}">
+                                        <input type="number" class="form-control" name="nid" value="{{$edit->nid}}" required>
                                         @error('nid')
                                         <div class="alert alert-danger">{{$message}}</div>
                                         @enderror
@@ -88,14 +88,14 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label class="form-label">Birth Date<span style="color:red;">*</span></label>
-                                        <input type="date" class="form-control" placeholder="" name="dob" value="{{$edit->dob}}">
+                                        <input type="date" class="form-control" placeholder="" name="dob" value="{{$edit->dob}}" required>
                                         @error('dob')
                                         <div class="alert alert-danger">{{$message}}</div>
                                         @enderror
                                     </div>
                                     <div class="col-md-6">
                                         <label class="form-label">Mobile Number<span style="color:red;">*</span></label>
-                                        <input type="number" class="form-control" name="mobile" value="{{$edit->mobile}}">
+                                        <input type="number" class="form-control" name="mobile" value="{{$edit->mobile}}" required>
                                         @error('mobile')
                                         <div class="alert alert-danger">{{$message}}</div>
                                         @enderror
@@ -146,14 +146,14 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label class="form-label">Nominee<span style="color:red;">*</span></label>
-                                        <input type="text" class="form-control" placeholder="" name="nominee_name" value="{{$edit->nominee_name}}">
+                                        <input type="text" class="form-control" placeholder="" name="nominee_name" value="{{$edit->nominee_name}}" required>
                                         @error('nominee_name')
                                         <div class="alert alert-danger">{{$message}}</div>
                                         @enderror
                                     </div>
                                     <div class="col-md-6">
                                         <label class="form-label">Nominee Relation<span style="color:red;"></span></label>
-                                        <input type="text" class="form-control" name="nominee_relation" value="{{$edit->nominee_relation}}">
+                                        <input type="text" class="form-control" name="nominee_relation" value="{{$edit->nominee_relation}}" required>
                                         @error('nominee_relation')
                                         <div class="alert alert-danger">{{$message}}</div>
                                         @enderror
@@ -162,14 +162,14 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label class="form-label">Father Name<span style="color:red;">*</span></label>
-                                        <input type="text" class="form-control" placeholder="" name="nominee_father_name" value="{{$edit->nominee_father_name}}">
+                                        <input type="text" class="form-control" placeholder="" name="nominee_father_name" value="{{$edit->nominee_father_name}}" required>
                                         @error('nominee_father_name')
                                         <div class="alert alert-danger">{{$message}}</div>
                                         @enderror
                                     </div>
                                     <div class="col-md-6">
                                         <label class="form-label">Mother Name<span style="color:red;">*</span></label>
-                                        <input type="text" class="form-control" name="nominee_mother_name" value="{{$edit->nominee_mother_name}}">
+                                        <input type="text" class="form-control" name="nominee_mother_name" value="{{$edit->nominee_mother_name}}" required>
                                         @error('nominee_mother_name')
                                         <div class="alert alert-danger">{{$message}}</div>
                                         @enderror
@@ -177,8 +177,8 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label class="form-label">NID Number<span style="color:red;"></span></label>
-                                        <input type="number" class="form-control" placeholder="" name="nominee_nid" value="{{$edit->nominee_nid}}">
+                                        <label class="form-label">NID Number<span style="color:red;">*</span></label>
+                                        <input type="number" class="form-control" placeholder="" name="nominee_nid" value="{{$edit->nominee_nid}}" required>
                                         @error('nominee_nid')
                                         <div class="alert alert-danger">{{$message}}</div>
                                         @enderror
@@ -195,14 +195,14 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <label class="form-label">Present Address<span style="color:red;">*</span></label>
-                                    <input type="text" class="form-control" placeholder="" name="nominee_present_address" value="{{$edit->nominee_present_address}}">
+                                    <input type="text" class="form-control" placeholder="" name="nominee_present_address" value="{{$edit->nominee_present_address}}" required>
                                     @error('nominee_present_address')
                                     <div class="alert alert-danger">{{$message}}</div>
                                     @enderror
                                 </div>
                                 <div class="col-md-6">
 
-                                    <label class="form-label">Profession<span style="color:red;"></span></label>
+                                    <label class="form-label">Profession</label>
                                     <input type="text" class="form-control" placeholder="" name="nominee_profession" value="{{$edit->nominee_profession}}">
                                     @error('nominee_profession')
                                     <div class="alert alert-danger">{{$message}}</div>
@@ -211,8 +211,8 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <label class="form-label">Birth Date<span style="color:red;"></span></label>
-                                    <input type="date" class="form-control" name="nominee_dob" value="{{$edit->nominee_dob}}">
+                                    <label class="form-label">Birth Date<span style="color:red;">*</span></label>
+                                    <input type="date" class="form-control" name="nominee_dob" value="{{$edit->nominee_dob}}" required>
                                     @error('nominee_dob')
                                     <div class="alert alert-danger">{{$message}}</div>
                                     @enderror

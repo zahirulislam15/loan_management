@@ -87,7 +87,7 @@
           <!-- Modal -->
           <a href="" data-bs-toggle="modal" data-bs-target="#income">
             <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">Todays Income</h4><span class="hind-font caption-12 c-dashboardInfo__count">{{$dayIncome}} <i class="fa-solid fa-bangladeshi-taka-sign"></i></span>
-            <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">This Month Expense {{$monthDeposit}} </h4>
+            <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">This Month Income {{$monthDeposit}} </h4>
           </a>
         </div>
       </div>
@@ -100,42 +100,48 @@
         </div>
       </div>
       @if($DayDrawer>=0)
-      <div class="c-dashboardInfo col-lg-3 col-md-6">
-        <div class="wrap">
-          <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">Hand Cash</h4>
+        <div class="c-dashboardInfo col-lg-3 col-md-6">
+          <div class="wrap">
+            <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">Hand Cash</h4>
 
-          <span class="hind-font caption-12 c-dashboardInfo__count">{{$DayDrawer}} <i class="fa-solid fa-bangladeshi-taka-sign"></i></span>
-          @if($MonthDrawer>=0)
-          <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">This Month Profit {{$MonthDrawer}} </h4>
-          @else @php
-          $negativeValue =($MonthDrawer);
-          $positiveValue = abs($negativeValue);
-          @endphp
-          <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">This Month Loss {{$positiveValue}} </h4>
-          @endif
+            <!-- <span class="hind-font caption-12 c-dashboardInfo__count">{{$DayDrawer}} <i class="fa-solid fa-bangladeshi-taka-sign"></i></span> -->
+            @if($MonthDrawer>=0)
+            <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">This Month Profit {{$MonthDrawer}} </h4>
+            @else @php
+            $negativeValue =($MonthDrawer);
+            $positiveValue = abs($negativeValue);
+            @endphp
+            <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">This Month Loss {{$positiveValue}} </h4>
+            @endif
 
+          </div>
         </div>
-      </div>
       @else
-      @php
-      $negativeValue =($drawer);
-      $positiveValue = abs($negativeValue);
-      @endphp
-
-      <div class="c-dashboardInfo col-lg-3 col-md-6">
-        <div class="wrap">
-          <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">Loss</h4><span class="hind-font caption-12 c-dashboardInfo__count">{{$dayExpense}} <i class="fa-solid fa-bangladeshi-taka-sign"></i></span>
-          <span class="hind-font caption-12 c-dashboardInfo__count">-{{$positiveValue}} <i class="fa-solid fa-bangladeshi-taka-sign"></i></span>
-          @if($MonthDrawer>=0)
-          <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">This Month Cash {{$MonthDrawer}} </h4>
-          @else @php
+        @php
           $negativeValue =($MonthDrawer);
           $positiveValue = abs($negativeValue);
-          @endphp
-          <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">This Month Cash -{{$positiveValue}} </h4>
-          @endif
+        @endphp
+
+        <div class="c-dashboardInfo col-lg-3 col-md-6">
+          <div class="wrap">
+            <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">
+              Loss
+            </h4>
+            <!-- <span class="hind-font caption-12 c-dashboardInfo__count">
+              {{$dayExpense}} 
+              <i class="fa-solid fa-bangladeshi-taka-sign"></i>
+            </span> -->
+            <span class="hind-font caption-12 c-dashboardInfo__count">-{{$positiveValue}} <i class="fa-solid fa-bangladeshi-taka-sign"></i></span>
+            @if($MonthDrawer>=0)
+              <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">This Month Cash {{$MonthDrawer}} </h4>
+              @else @php
+                $negativeValue =($MonthDrawer);
+                $positiveValue = abs($negativeValue);
+              @endphp
+              <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">This Month Cash -{{$positiveValue}} </h4>
+            @endif
+          </div>
         </div>
-      </div>
     </div>
     @endif
   </div>

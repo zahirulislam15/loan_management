@@ -24,7 +24,7 @@
           <a href="{{route('cashbook')}}" class="nav-link">
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>
-              Cashbook
+              Todays Track
             </p>
           </a>
         </li>
@@ -69,7 +69,7 @@
             </li>
           </ul>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>
@@ -119,7 +119,7 @@
               </a>
             </li>
           </ul>
-        </li>
+        </li> -->
         <li class="nav-item">
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -136,14 +136,14 @@
               </a>
             </li>
           </ul>
-          <ul class="nav nav-treeview">
+          <!-- <ul class="nav nav-treeview">
             <li class="nav-item">
               <a href="{{route('closed.loan.list')}}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Matured DPS</p>
               </a>
             </li>
-          </ul>
+          </ul> -->
         </li>
         <li class="nav-item">
           <a href="{{route('transection.history')}}" class="nav-link">

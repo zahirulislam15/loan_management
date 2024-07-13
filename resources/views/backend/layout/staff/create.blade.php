@@ -21,8 +21,8 @@
                                         @enderror
                                     </div>
                                     <div class="col-md-6">
-                                        <label class="form-label">Name(Bangle)<span style="color:red;">*</span></label>
-                                        <input type="text" class="form-control" name="name_bn" value="{{ old('name_bn') }}" required>
+                                        <label class="form-label">Name(Bangle)</label>
+                                        <input type="text" class="form-control" name="name_bn" value="{{ old('name_bn') }}" >
                                         @error('name_bn')
                                         <div class="alert alert-danger">{{$message}}</div>
                                         @enderror

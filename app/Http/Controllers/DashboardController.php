@@ -33,9 +33,10 @@ class DashboardController extends Controller
 
 
         //official Transection
-        $data['income'] = Transection::where('transection_type', '1')->where('purpose', '!=', 'no')->sum('transection_amount');
-        $data['expense'] = Transection::where('transection_type', '2')->where('purpose', '!=', 'no')->sum('transection_amount');
+        $data['income'] = Transection::where('transection_type', '1')->sum('transection_amount');
+        $data['expense'] = Transection::where('transection_type', '2')->sum('transection_amount');
 
+        // dd($data['expense']);
 
         return view('backend.layout.Dashboard.dashboard', $data);
     }
