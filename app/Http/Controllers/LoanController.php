@@ -41,6 +41,7 @@ class LoanController extends Controller
     {
         $data['account'] = Member::where('status', '1')->latest()->get();
         $data['edit'] = Loan::find($id);
+        return $data;
         return view('backend.layout.Loan.edit', $data);
     }
 
@@ -49,6 +50,7 @@ class LoanController extends Controller
      */
     public function loan_create_post(Request $request)
     {
+        // return $request;
         $currentDate = Carbon::now();
         $data = new Loan();
         $data->account_number = $request->account_number;
@@ -60,8 +62,11 @@ class LoanController extends Controller
         $data->close_date = $currentDate->addMonths($request->month);
         $data->interest_amount = ($request->get('amount') * $request->get('interest') / 100);
         $data->status = '1';
+        $data->start_date = $request->start_date;
+        $data->frequency = $request->frequency;
         $data->save();
 
+        // return $date;
         //loan Create in transection table
         $transaction = new Transection();
         $transaction->account_id = $request->get('account_number');

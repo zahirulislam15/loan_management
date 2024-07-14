@@ -17,9 +17,10 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label class="form-label">Account Number<span style="color:red;">*</span></label>
+                                        
                                         <select name="account_number" class="form-control" id="">
                                             @foreach($account as $data)
-                                            <option value="{{$data->id}}">{{$data->account_number}}</option>
+                                            <option value="{{$data->id}}" {{ $data->id == $edit->account_number ? 'selected' : '' }}>{{$data->account_number}}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -42,10 +43,27 @@
                                 </div>
                             </div>
                             <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="frequency" class="form-label">Frequency:</label>
+                                        <select class="form-control" id="frequency" name="frequency" onchange="calculatePayment()">
+                                            <option value="monthly">Monthly</option>
+                                            <option value="weekly">Weekly</option>
+                                            <option value="daily">Daily</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="payment">Payment:</label>
+                                        <input class="form-control" type="text" id="payment" name="payment" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
                                 <label class="form-label">Loan Purpose<span style="color:red;">*</span></label>
                                 <!-- <input type="text" class="form-control" placeholder="Write valid Purpose" name="loan_purpose" value="{{$edit->loan_purpose}}" required> -->
                                 <textarea name="loan_purpose" id="" placeholder="Write valid Purpose" class="form-control"  value="{{$edit->loan_purpose}}" required>test</textarea>
                             </div>
+
                             <div class="col-12">
                                 <div class="d-grid">
                                     <button type="submit" class="btn btn-primary">Submit</button>
@@ -58,8 +76,4 @@
         </div>
     </div>
 </main>
-
-
-
-
 @endsection
